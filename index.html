@@ -3,51 +3,76 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Monthly Newsletter</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <title>Monthly Newsletters</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
+
   <style>
+    :root {
+      --royal-blue: #2a3eb1;
+      --silver-grey: #d4d4dc;
+      --deep-grey: #333;
+      --hover-blue: #1f2a87;
+    }
+
     body {
+      margin: 0;
+      padding: 40px 20px;
+      background: linear-gradient(to right, #f8f9fa, #e3e4e8);
       font-family: 'Roboto', sans-serif;
-      background-color: #f2f2f2;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      padding: 40px;
+      min-height: 100vh;
     }
 
     h1 {
-      margin-bottom: 40px;
-      color: #333;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      color: var(--royal-blue);
+      text-shadow: 1px 1px 2px #ccc;
     }
 
     .button-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 15px;
-      max-width: 500px;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
       width: 100%;
+      max-width: 700px;
     }
 
     .month-button {
+      display: inline-block;
       padding: 15px 20px;
-      font-size: 16px;
-      text-align: center;
-      background-color: #4CAF50;
+      background-color: var(--royal-blue);
       color: white;
-      border: none;
-      border-radius: 8px;
+      text-align: center;
       text-decoration: none;
-      transition: background-color 0.3s ease;
+      font-size: 16px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      border: 1px solid var(--silver-grey);
     }
 
     .month-button:hover {
-      background-color: #45a049;
+      background-color: var(--hover-blue);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     }
 
-    @media (max-width: 600px) {
-      .button-grid {
-        grid-template-columns: 1fr 1fr;
+    footer {
+      margin-top: 40px;
+      color: var(--deep-grey);
+      font-size: 14px;
+    }
+
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 2rem;
+        text-align: center;
       }
     }
   </style>
@@ -57,20 +82,23 @@
   <h1>Monthly Newsletters</h1>
 
   <div class="button-grid">
-  <a href="january.html" class="month-button">January</a>
-  <a href="february.html" class="month-button">February</a>
-  <a href="march.html" class="month-button">March</a>
-  <a href="april.html" class="month-button">April</a>
-  <a href="may25.html" class="month-button">May</a>
-  <a href="Jun25.html" class="month-button">June</a>
-  <a href="july.html" class="month-button">July</a>
-  <a href="august.html" class="month-button">August</a>
-  <a href="september.html" class="month-button">September</a>
-  <a href="october.html" class="month-button">October</a>
-  <a href="november.html" class="month-button">November</a>
-  <a href="december.html" class="month-button">December</a>
-</div>
+    <a href="bulletins/january.html" class="month-button">January</a>
+    <a href="bulletins/february.html" class="month-button">February</a>
+    <a href="bulletins/march.html" class="month-button">March</a>
+    <a href="bulletins/april.html" class="month-button">April</a>
+    <a href="bulletins/may.html" class="month-button">May</a>
+    <a href="bulletins/june.html" class="month-button">June</a>
+    <a href="bulletins/july.html" class="month-button">July</a>
+    <a href="bulletins/august.html" class="month-button">August</a>
+    <a href="bulletins/september.html" class="month-button">September</a>
+    <a href="bulletins/october.html" class="month-button">October</a>
+    <a href="bulletins/november.html" class="month-button">November</a>
+    <a href="bulletins/december.html" class="month-button">December</a>
+  </div>
 
+  <footer>
+    &copy; 2025 Your Organization Name. All rights reserved.
+  </footer>
 
 </body>
 </html>
